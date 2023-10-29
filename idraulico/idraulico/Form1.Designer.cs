@@ -39,6 +39,10 @@ namespace idraulico
             this.TXTsrch = new System.Windows.Forms.TextBox();
             this.BTadd = new System.Windows.Forms.Button();
             this.LST1 = new System.Windows.Forms.ListBox();
+            this.TXTavgIncome = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TXTmaxIcome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NUDday)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +107,7 @@ namespace idraulico
             // 
             this.TXTsrch.Location = new System.Drawing.Point(144, 74);
             this.TXTsrch.Name = "TXTsrch";
-            this.TXTsrch.Size = new System.Drawing.Size(300, 20);
+            this.TXTsrch.Size = new System.Drawing.Size(346, 20);
             this.TXTsrch.TabIndex = 7;
             this.TXTsrch.TextChanged += new System.EventHandler(this.TXTsrch_TextChanged);
             // 
@@ -121,17 +125,54 @@ namespace idraulico
             // 
             this.LST1.FormattingEnabled = true;
             this.LST1.Items.AddRange(new object[] {
-            "I tuoi interventi appariranno qui..."});
+            "Lascia la casella di ricerca vuota per vedere tutti gli interventi oppure inizia " +
+                "a digitare..."});
             this.LST1.Location = new System.Drawing.Point(13, 104);
             this.LST1.Name = "LST1";
-            this.LST1.Size = new System.Drawing.Size(431, 134);
+            this.LST1.Size = new System.Drawing.Size(477, 134);
             this.LST1.TabIndex = 9;
+            // 
+            // TXTavgIncome
+            // 
+            this.TXTavgIncome.Location = new System.Drawing.Point(191, 247);
+            this.TXTavgIncome.Name = "TXTavgIncome";
+            this.TXTavgIncome.Size = new System.Drawing.Size(100, 20);
+            this.TXTavgIncome.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 250);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(173, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Media di incassi per tipo intervento:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(297, 250);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Incasso massimo";
+            // 
+            // TXTmaxIcome
+            // 
+            this.TXTmaxIcome.Location = new System.Drawing.Point(390, 247);
+            this.TXTmaxIcome.Name = "TXTmaxIcome";
+            this.TXTmaxIcome.Size = new System.Drawing.Size(100, 20);
+            this.TXTmaxIcome.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 267);
+            this.ClientSize = new System.Drawing.Size(506, 378);
+            this.Controls.Add(this.TXTmaxIcome);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TXTavgIncome);
             this.Controls.Add(this.LST1);
             this.Controls.Add(this.BTadd);
             this.Controls.Add(this.TXTsrch);
@@ -163,6 +204,10 @@ namespace idraulico
         private System.Windows.Forms.TextBox TXTsrch;
         private System.Windows.Forms.Button BTadd;
         private System.Windows.Forms.ListBox LST1;
+        private System.Windows.Forms.TextBox TXTavgIncome;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TXTmaxIcome;
     }
 }
 

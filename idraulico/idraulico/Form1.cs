@@ -1,4 +1,4 @@
-﻿// Ignore Spelling: inserisci Corretti dati
+﻿// Ignore Spelling: inserisci Corretti dati idraulico incasso medio
 
 using System;
 using System.Collections.Generic;
@@ -42,7 +42,24 @@ namespace idraulico
 
         private void TXTsrch_TextChanged(object sender, EventArgs e)
         {
-            
+            if (TXTsrch.Text == "")
+            {
+                LST1.Items.Clear();
+                LST1.Items.Add(array);
+            }
+            else
+            {
+                LST1.Items.Clear();
+                for (int i = 0; i < nv; i++) 
+                { 
+                    if (TXTsrch.Text.Contains(array[i].interventionType))
+                    {
+                        LST1.Items.Add(array[i]);
+                    }
+                }
+                TXTavgIncome.Text = Convert.ToString(incassoMedio());
+                TXTmaxIcome.Text = Convert.ToString(incassoMassimo());
+            }
         }
 
         public bool datiCorretti()
@@ -97,6 +114,44 @@ namespace idraulico
             array[nv].day = useless.day;
             array[nv].interventionType = useless.interventionType;
             array[nv].revenue = useless.revenue;
+        }
+
+        public float incassoMedio()
+        {
+            float totale = 0;
+            float counter = 0;
+
+            for (int i = 0; i < nv;  i++)
+            {
+                if (array[i].interventionType == TXTsrch.Text)
+                {
+                    totale += array[i].revenue;
+                    counter++;
+                }
+            }
+
+            if (counter == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return totale / counter;
+            }
+        }
+
+        public float incassoMassimo()
+        {
+            float max = array[0].revenue;
+
+            for (int i = 0; i < nv; i++)
+            {
+                if (array[i].revenue > max)
+                {
+                    max = array[i].revenue;
+                }
+            }
+            return max;
         }
     }
 }
