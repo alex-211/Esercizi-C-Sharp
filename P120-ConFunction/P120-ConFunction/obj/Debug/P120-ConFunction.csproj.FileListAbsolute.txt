@@ -1,0 +1,10 @@
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\bin\Debug\P120-ConFunction.exe.config
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\bin\Debug\P120-ConFunction.exe
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\bin\Debug\P120-ConFunction.pdb
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\obj\Debug\P120-ConFunction.csproj.AssemblyReference.cache
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\obj\Debug\P120_ConFunction.Form1.resources
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\obj\Debug\P120_ConFunction.Properties.Resources.resources
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\obj\Debug\P120-ConFunction.csproj.GenerateResource.cache
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\obj\Debug\P120-ConFunction.csproj.CoreCompileInputs.cache
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\obj\Debug\P120-ConFunction.exe
+C:\Users\Utente\Desktop\Esercizi-Function\P120-ConFunction\P120-ConFunction\obj\Debug\P120-ConFunction.pdb
