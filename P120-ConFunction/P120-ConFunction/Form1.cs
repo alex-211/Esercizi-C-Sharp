@@ -20,21 +20,29 @@ namespace P120_ConFunction
 
         public struct voti
         {
-            int italiano;
-            int storia;
-            int inglese;
-            int matematica;
-            int informatica;
-            int s_r;
-            int tpsit;
-            int telecomunicazioni;
+            public int italiano;
+            public int storia;
+            public int inglese;
+            public int matematica;
+            public int informatica;
+            public int s_r;
+            public int tpsit;
+            public int telecomunicazioni;
         }
 
         public voti voto;
         public bool sistemaSelezionato = false;
 
+        public voti pagella;
+
         private void BTadd_Click(object sender, EventArgs e)
         {
+            if (validaPieno() == true)
+            {
+                MessageBox.Show("Vettore pieno");
+                return;
+            }
+            
             if (sistemaSelezionato == false)
             {
                 MessageBox.Show("Selezionare il sistema di valutazione");
@@ -46,7 +54,7 @@ namespace P120_ConFunction
         {
             sistemaSelezionato = true;
 
-            if ((string)CBsistema.SelectedItem == "Lettere")
+            /*if ((string)CBsistema.SelectedItem == "Lettere")
             {
                 CBvoto.Items.Add("A+");
                 CBvoto.Items.Add("A");
@@ -60,8 +68,8 @@ namespace P120_ConFunction
                 CBvoto.Items.Add("D");
                 CBvoto.Items.Add("D-");
                 CBvoto.Items.Add("F");
-            }
-            else if ((string)CBsistema.SelectedItem == "Numeri 0-100")
+            }*/
+            if ((string)CBsistema.SelectedItem == "Numeri 0-100")
             {
                 for (int i = 0; i <= 100; i++)
                 {
@@ -79,6 +87,38 @@ namespace P120_ConFunction
             label2.Hide();
             CBsistema.Hide();
             label5.Show();
+            CBvoto.Items.Remove("Seleziona un sistema di valutazione!");
+        }
+
+        public bool validaPieno()
+        {
+            if (nv == MAXV)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        public bool validaVouto()
+        {
+            if (nv == 0)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        public int contaInsufficienze()
+        {
+            int insufficienze = 0;
+
+            for (int i = 0; i < nv; i++)
+            {
+                if ((string)CBsistema.SelectedItem == "Numeri 0-100" && (pagella[i].italiano < 6 ))
+                {
+
+                }
+            }
         }
     }
 }
