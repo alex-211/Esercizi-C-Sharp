@@ -1,0 +1,15 @@
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\bin\Debug\Pinger-Porpiglia4AINF.exe.config
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\bin\Debug\Pinger-Porpiglia4AINF.exe
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\bin\Debug\Pinger-Porpiglia4AINF.pdb
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\Pinger-Porpiglia4AINF.csproj.AssemblyReference.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\MainWindow.g.cs
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\App.g.cs
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\Pinger-Porpiglia4AINF_MarkupCompile.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\Pinger-Porpiglia4AINF_MarkupCompile.lref
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\MainWindow.baml
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\Pinger-Porpiglia4AINF.g.resources
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\Pinger_Porpiglia4AINF.Properties.Resources.resources
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\Pinger-Porpiglia4AINF.csproj.GenerateResource.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\Pinger-Porpiglia4AINF.csproj.CoreCompileInputs.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\Pinger-Porpiglia4AINF.exe
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\Pinger-Porpiglia4AINF\Pinger-Porpiglia4AINF\obj\Debug\Pinger-Porpiglia4AINF.pdb
