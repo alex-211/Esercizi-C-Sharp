@@ -1,0 +1,10 @@
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\bin\Debug\idraulico.exe.config
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\bin\Debug\idraulico.exe
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\bin\Debug\idraulico.pdb
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\obj\Debug\idraulico.csproj.AssemblyReference.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\obj\Debug\idraulico.Form1.resources
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\obj\Debug\idraulico.Properties.Resources.resources
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\obj\Debug\idraulico.csproj.GenerateResource.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\obj\Debug\idraulico.csproj.CoreCompileInputs.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\obj\Debug\idraulico.exe
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\idraulico\idraulico\obj\Debug\idraulico.pdb

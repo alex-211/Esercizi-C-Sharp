@@ -43,6 +43,8 @@ namespace idraulico
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.TXTmaxIcome = new System.Windows.Forms.TextBox();
+            this.BTopen = new System.Windows.Forms.Button();
+            this.BTsave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NUDday)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,11 +166,33 @@ namespace idraulico
             this.TXTmaxIcome.Size = new System.Drawing.Size(100, 20);
             this.TXTmaxIcome.TabIndex = 13;
             // 
+            // BTopen
+            // 
+            this.BTopen.Location = new System.Drawing.Point(15, 286);
+            this.BTopen.Name = "BTopen";
+            this.BTopen.Size = new System.Drawing.Size(242, 23);
+            this.BTopen.TabIndex = 15;
+            this.BTopen.Text = "Apri file";
+            this.BTopen.UseVisualStyleBackColor = true;
+            this.BTopen.Click += new System.EventHandler(this.BTopen_Click);
+            // 
+            // BTsave
+            // 
+            this.BTsave.Location = new System.Drawing.Point(263, 286);
+            this.BTsave.Name = "BTsave";
+            this.BTsave.Size = new System.Drawing.Size(227, 23);
+            this.BTsave.TabIndex = 16;
+            this.BTsave.Text = "Salva file";
+            this.BTsave.UseVisualStyleBackColor = true;
+            this.BTsave.Click += new System.EventHandler(this.BTsave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 378);
+            this.ClientSize = new System.Drawing.Size(506, 316);
+            this.Controls.Add(this.BTsave);
+            this.Controls.Add(this.BTopen);
             this.Controls.Add(this.TXTmaxIcome);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -208,6 +232,8 @@ namespace idraulico
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TXTmaxIcome;
+        private System.Windows.Forms.Button BTopen;
+        private System.Windows.Forms.Button BTsave;
     }
 }
 

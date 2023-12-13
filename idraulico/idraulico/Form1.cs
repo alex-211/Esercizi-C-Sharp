@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace idraulico
 {
@@ -24,6 +25,10 @@ namespace idraulico
         const int MAXV = 10;
         int nv = 0;
         interventions[] array = new interventions[MAXV];
+
+        FileStream file;
+        StreamReader sReader;
+        StreamWriter sWriter;
 
         public Form1()
         {
@@ -152,6 +157,48 @@ namespace idraulico
                 }
             }
             return max;
+        }
+
+        private void BTopen_Click(object sender, EventArgs e)
+        {
+            string filePath = string.Empty;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "txt files | (*.txt)";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = openFileDialog.FileName;
+            }
+
+            if (filePath == "") // not sure this is needed 
+            {
+                return;
+            }
+
+            file = new FileStream(filePath, FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+            sReader = new StreamReader(file);
+            sWriter = new StreamWriter(file);
+        }
+
+        private void BTsave_Click(object sender, EventArgs e)
+        {
+            string folderPath = "";
+            FolderBrowserDialog dialogChooseFolder = new FolderBrowserDialog();
+
+            if (dialogChooseFolder.ShowDialog() == DialogResult.OK)
+            {
+                folderPath = dialogChooseFolder.SelectedPath;
+            }
+
+            if (folderPath == "")
+            {
+                MessageBox.Show("");
+                return;
+            }
+            else
+            {
+                // rest of the stuff to save goes here
+            }
         }
     }
 }
