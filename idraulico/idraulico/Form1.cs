@@ -26,10 +26,6 @@ namespace idraulico
         int nv = 0;
         interventions[] array = new interventions[MAXV];
 
-        FileStream file;
-        StreamReader sReader;
-        StreamWriter sWriter;
-
         public Form1()
         {
             InitializeComponent();
@@ -108,7 +104,6 @@ namespace idraulico
 
         public void inserisci(interventions useless)
         {
-            leggiDati();
 
             if (nv == MAXV)
             {
@@ -119,6 +114,7 @@ namespace idraulico
             array[nv].day = useless.day;
             array[nv].interventionType = useless.interventionType;
             array[nv].revenue = useless.revenue;
+            nv++; 
         }
 
         public float incassoMedio()
@@ -161,6 +157,7 @@ namespace idraulico
 
         private void BTopen_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Se apri un file ora, perderai i dati non salvati");
             string filePath = string.Empty;
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "txt files | (*.txt)";
@@ -175,19 +172,25 @@ namespace idraulico
                 return;
             }
 
-            file = new FileStream(filePath, FileMode.Open, FileAccess.ReadWrite, FileShare.None);
-            sReader = new StreamReader(file);
-            sWriter = new StreamWriter(file);
+            FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+            StreamReader sReader = new StreamReader(file);
+
+            // code n shit
+
+            file.Close();
+            sReader.Close();
+
         }
 
         private void BTsave_Click(object sender, EventArgs e)
         {
+
             string folderPath = "";
             FolderBrowserDialog dialogChooseFolder = new FolderBrowserDialog();
 
             if (dialogChooseFolder.ShowDialog() == DialogResult.OK)
             {
-                folderPath = dialogChooseFolder.SelectedPath;
+                folderPath = dialogChooseFolder.SelectedPath + "/idraulico.txt";
             }
 
             if (folderPath == "")
@@ -197,8 +200,42 @@ namespace idraulico
             }
             else
             {
-                // rest of the stuff to save goes here
+                if (File.Exists(folderPath))
+                {
+                    FileStream file = new FileStream(folderPath, FileMode.Truncate, FileAccess.ReadWrite, FileShare.Write);
+                    StreamWriter sWriter = new StreamWriter(file);
+
+                    for (int i = 0; i < nv; i++)
+                    {
+                        sWriter.Write("" + array[i].day + ",");
+                        sWriter.Write("" + array[i].interventionType + ",");
+                        sWriter.WriteLine("" + array[i].revenue + "");
+                    }
+
+                    sWriter.Close();
+                    file.Close();
+                }
+                else
+                {
+                    FileStream file = new FileStream(folderPath, FileMode.Open, FileAccess.ReadWrite, FileShare.Write);
+                    StreamWriter sWriter = new StreamWriter(file);
+
+                    for (int i = 0; i < nv; i++)
+                    {
+                        sWriter.Write("" + array[i].day + ",");
+                        sWriter.Write("" + array[i].interventionType + ",");
+                        sWriter.WriteLine("" + array[i].revenue + "");
+                    }
+
+                    sWriter.Close();
+                    file.Close();
+                }
             }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }
