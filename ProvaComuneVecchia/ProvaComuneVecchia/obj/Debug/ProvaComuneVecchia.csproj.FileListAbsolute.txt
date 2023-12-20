@@ -1,0 +1,10 @@
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\bin\Debug\ProvaComuneVecchia.exe.config
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\bin\Debug\ProvaComuneVecchia.exe
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\bin\Debug\ProvaComuneVecchia.pdb
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\obj\Debug\ProvaComuneVecchia.csproj.AssemblyReference.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\obj\Debug\ProvaComuneVecchia.Form1.resources
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\obj\Debug\ProvaComuneVecchia.Properties.Resources.resources
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\obj\Debug\ProvaComuneVecchia.csproj.GenerateResource.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\obj\Debug\ProvaComuneVecchia.csproj.CoreCompileInputs.cache
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\obj\Debug\ProvaComuneVecchia.exe
+C:\Users\Utente\Desktop\Esercizi-C-Sharp\ProvaComuneVecchia\ProvaComuneVecchia\obj\Debug\ProvaComuneVecchia.pdb
