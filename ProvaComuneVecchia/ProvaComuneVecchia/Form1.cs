@@ -32,6 +32,10 @@ namespace ProvaComuneVecchia
         int nv = 0;
         music[] collection = new music[MAXV];
 
+        FileStream file;
+        StreamWriter sWriter;
+        StreamReader sReader;
+
         private void BTadd_Click(object sender, EventArgs e)
         {
             if (TXTtitle.Text == "")
@@ -148,8 +152,8 @@ namespace ProvaComuneVecchia
 
             if (File.Exists(folderPath))
             {
-                FileStream file = new FileStream(folderPath, FileMode.Truncate, FileAccess.ReadWrite, FileShare.Write);
-                StreamWriter sWriter = new StreamWriter(file);
+                file = new FileStream(folderPath, FileMode.Truncate, FileAccess.ReadWrite, FileShare.Write);
+                sWriter = new StreamWriter(file);
 
                 for (int i = 0; i < nv; i++)
                 {
@@ -158,13 +162,12 @@ namespace ProvaComuneVecchia
                     sWriter.Write(collection[i].album + "*");
                     sWriter.Write(collection[i].durationMinutes + "*");
                     sWriter.WriteLine(collection[i].durationSeconds);
-
                 }
             }
             else
             {
-                FileStream file = new FileStream(folderPath, FileMode.Create, FileAccess.ReadWrite, FileShare.Write);
-                StreamWriter sWriter = new StreamWriter(file);
+                file = new FileStream(folderPath, FileMode.Create, FileAccess.ReadWrite, FileShare.Write);
+                sWriter = new StreamWriter(file);
 
                 for (int i = 0; i < nv; i++)
                 {
@@ -173,19 +176,56 @@ namespace ProvaComuneVecchia
                     sWriter.Write(collection[i].album + "*");
                     sWriter.Write(collection[i].durationMinutes + "*");
                     sWriter.WriteLine(collection[i].durationSeconds);
-
                 }
             }
         }
 
         private void BTloadFile_Click(object sender, EventArgs e)
         {
+            string filePath = "";
+            OpenFileDialog fileDialog = new OpenFileDialog();
 
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = fileDialog.FileName;
+            }
+            else if (filePath == "")
+            {
+                MessageBox.Show("");
+                return;
+            }
+
+            file = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
+            sReader = new StreamReader(file);
+
+            string line;
+            file.Seek(0, SeekOrigin.Begin);
+
+            while (!sReader.EndOfStream)
+            {
+                line = sReader.ReadLine();
+                string[] fields = line.Split(',');
+
+                if (fields.Length != 5)
+                {
+                    MessageBox.Show("");
+                    return;
+                }
+
+                collection[nv].songTitle = fields[0];
+                collection[nv].artist = fields[1];
+                collection[nv].album = fields[2];
+                collection[nv].durationMinutes = Convert.ToInt32(fields[3]);
+                collection[nv].durationSeconds = Convert.ToInt32(fields[4]);
+                nv++;
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            file.Close();
+            sWriter.Close();
+            sReader.Close();
         }
     }
 }
