@@ -227,5 +227,19 @@ namespace ProvaComuneVecchia
             sWriter.Close();
             sReader.Close();
         }
+
+        public void updateTimeStats()
+        {
+            int totalMinutes = 0;
+            int totalSeconds = 0;
+            for (int i = 0; i < nv; i ++) 
+            {
+                totalMinutes += collection[i].durationMinutes;
+                totalSeconds += collection[i].durationSeconds;
+            }
+
+            TimeSpan totalDuration = new TimeSpan(0, totalMinutes, totalSeconds);
+            LBLtotalDuration.Text = "Total songs duration: " + totalDuration.ToString();
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace ProvaComuneVecchia
             this.label9 = new System.Windows.Forms.Label();
             this.TXTsrcByTitle = new System.Windows.Forms.TextBox();
             this.LSTsrcRes = new System.Windows.Forms.ListBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.LBLtotalDuration = new System.Windows.Forms.Label();
             this.BTsave = new System.Windows.Forms.Button();
             this.BTloadFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NUDdurationMin)).BeginInit();
@@ -211,14 +211,14 @@ namespace ProvaComuneVecchia
             this.LSTsrcRes.Size = new System.Drawing.Size(511, 95);
             this.LSTsrcRes.TabIndex = 17;
             // 
-            // label11
+            // LBLtotalDuration
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 175);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "finish point 4";
+            this.LBLtotalDuration.AutoSize = true;
+            this.LBLtotalDuration.Location = new System.Drawing.Point(12, 175);
+            this.LBLtotalDuration.Name = "LBLtotalDuration";
+            this.LBLtotalDuration.Size = new System.Drawing.Size(129, 13);
+            this.LBLtotalDuration.TabIndex = 19;
+            this.LBLtotalDuration.Text = "Total songs duration: N/A";
             // 
             // BTsave
             // 
@@ -247,7 +247,7 @@ namespace ProvaComuneVecchia
             this.ClientSize = new System.Drawing.Size(800, 223);
             this.Controls.Add(this.BTloadFile);
             this.Controls.Add(this.BTsave);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.LBLtotalDuration);
             this.Controls.Add(this.LSTsrcRes);
             this.Controls.Add(this.TXTsrcByTitle);
             this.Controls.Add(this.label9);
@@ -296,7 +296,7 @@ namespace ProvaComuneVecchia
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TXTsrcByTitle;
         private System.Windows.Forms.ListBox LSTsrcRes;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label LBLtotalDuration;
         private System.Windows.Forms.Button BTsave;
         private System.Windows.Forms.Button BTloadFile;
     }
